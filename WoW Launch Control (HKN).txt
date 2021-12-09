@@ -1,0 +1,530 @@
+//-----------------------------------------------------------
+// Type pass
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Ctrl Alt C>
+	<SendFocusWin>
+        <text Coolman1!>
+
+//-----------------------------------------------------------
+// Cancel Actions
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Ctrl X>
+   <SendPC local>
+      <Cancel>
+
+//-----------------------------------------------------------
+// Reset WoW Windows
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Ctrl R>
+<SendPC local>
+<RenameWin "World of Warcraft" WoW1>
+<SendPC local>
+<RenameWin "World of Warcraft" WoW2>
+<SendPC local>
+<RenameWin "World of Warcraft" WoW3>
+<SendPC local>
+<RenameWin "World of Warcraft" WoW4>
+<SendPC local>
+<RenameWin "World of Warcraft" WoW5>
+
+//-----------------------------------------------------------
+// Rename WoW windows
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Ctrl T>
+<SendPC local>
+<RenameWin WoW1 "World of Warcraft">
+<SendPC local>
+<RenameWin WoW2 "World of Warcraft">
+<SendPC local>
+<RenameWin WoW3 "World of Warcraft">
+<SendPC local>
+<RenameWin WoW4 "World of Warcraft">
+<SendPC local>
+<RenameWin WoW5 "World of Warcraft">
+
+//-----------------------------------------------------------
+// SUBROUTINE TO LAUNCH AND RENAME A COPY OF WOW.
+//-----------------------------------------------------------
+<Command LaunchAndRename>
+<SendPC %1%>
+<Run "D:\World of Warcraft\Wow.exe">
+<RenameTargetWin %2%>
+<SetWinRect %3% %4% %5% %6%>
+ 
+//-----------------------------------------------------------
+// HOTKEY TO LAUNCH AND RENAME BOTH WOW'S.
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Alt Ctrl L>
+    <LaunchAndRename Local WoW1 150 0 1477 831>
+    <LaunchAndRename Local WoW2 150 831 442 249>
+    <LaunchAndRename Local WoW3 592 831 442 249>
+    <LaunchAndRename Local WoW4 1034 831 442 249>
+    <LaunchAndRename Local WoW5 1476 831 442 249>
+
+//-----------------------------------------------------------
+// RESIZE
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Alt Ctrl 1>
+<TargetWin WoW1>
+<SetWinRect 150 0 1477 831>
+<TargetWin WoW2>
+<SetWinRect 150 831 442 249>
+<TargetWin WoW3>
+<SetWinRect 592 831 442 249>
+<TargetWin WoW4>
+<SetWinRect 1034 831 442 249>
+<TargetWin WoW5>
+<SetWinRect 1476 831 442 249>
+
+<Hotkey ScrollLockOn Alt Ctrl 2>
+<TargetWin WoW2>
+<SetWinRect 150 0 1477 831>
+<TargetWin WoW1>
+<SetWinRect 150 831 442 249>
+<TargetWin WoW3>
+<SetWinRect 592 831 442 249>
+<TargetWin WoW4>
+<SetWinRect 1034 831 442 249>
+<TargetWin WoW5>
+<SetWinRect 1476 831 442 249>
+
+<Hotkey ScrollLockOn Alt Ctrl 3>
+<TargetWin WoW3>
+<SetWinRect 150 0 1477 831>
+<TargetWin WoW2>
+<SetWinRect 150 831 442 249>
+<TargetWin WoW1>
+<SetWinRect 592 831 442 249>
+<TargetWin WoW4>
+<SetWinRect 1034 831 442 249>
+<TargetWin WoW5>
+<SetWinRect 1476 831 442 249>
+
+<Hotkey ScrollLockOn Alt Ctrl 4>
+<TargetWin WoW4>
+<SetWinRect 150 0 1477 831>
+<TargetWin WoW2>
+<SetWinRect 150 831 442 249>
+<TargetWin WoW3>
+<SetWinRect 592 831 442 249>
+<TargetWin WoW1>
+<SetWinRect 1034 831 442 249>
+<TargetWin WoW5>
+<SetWinRect 1476 831 442 249>
+
+<Hotkey ScrollLockOn Alt Ctrl 5>
+<TargetWin WoW5>
+<SetWinRect 150 0 1477 831>
+<TargetWin WoW2>
+<SetWinRect 150 831 442 249>
+<TargetWin WoW3>
+<SetWinRect 592 831 442 249>
+<TargetWin WoW4>
+<SetWinRect 1034 831 442 249>
+<TargetWin WoW1>
+<SetWinRect 1476 831 442 249>
+
+//-----------------------------------------------------------
+// DEFINE MAIL LABELS FOR SENDING KEY STROKES
+//-----------------------------------------------------------
+<Label w1 Local SendWinM WoW1>
+<Label w2 Local SendWinM WoW2>
+<Label w3 Local SendWinM WoW3>
+<Label w4 Local SendWinM WoW4>
+<Label w5 Local SendWinM WoW5>
+
+//-----------------------------------------------------------
+// CLOSE WOWS
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Alt Ctrl X>
+   <TargetWin WoW1>
+   <CloseWin>
+   <TargetWin WoW2>
+   <CloseWin>
+   <TargetWin WoW3>
+   <CloseWin>
+   <TargetWin WoW4>
+   <CloseWin>
+   <TargetWin WoW5>
+   <CloseWin>
+
+//-----------------------------------------------------------
+// Log in to accounts: Main
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Ctrl Alt F1>
+    <SendWinM WoW1>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW2>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW3>
+        <wait 1000>
+        <text sdenq>
+        <wait 500>
+        <key Tab>
+        <wait 500>
+	<text Coolman1!>
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW4>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW5>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+<Hotkey ScrollLockOn Ctrl Alt F2>
+    <SendWinM WoW1>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW2>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW3>
+        <wait 1000>
+        <text bdenq3>
+        <wait 500>
+        <key Tab>
+        <wait 500>
+	<text Coolman1!>
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW4>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW5>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+<Hotkey ScrollLockOn Ctrl Alt F3>
+    <SendWinM WoW1>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW2>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW3>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW4>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW5>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+<Hotkey ScrollLockOn Ctrl Alt F4>
+    <SendWinM WoW1>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW2>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW3>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW4>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW5>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+<Hotkey ScrollLockOn Ctrl Alt F5>
+    <SendWinM WoW1>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW2>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW3>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW4>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW5>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+<Hotkey ScrollLockOn Ctrl Alt F6>
+    <SendWinM WoW1>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW2>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW3>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW4>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+    <SendWinM WoW5>
+        <wait 1000>
+        <text ->
+        <wait 500>
+        <key Tab>
+        <wait 500>
+        <text ->
+        <wait 500>
+        <key enter>
+        <wait 500>
+
+//-----------------------------------------------------------
+// General
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn U, I, O, P, F, G, H, K, L, C, B, N, Home>
+<SendLabel w1, w2, w3, w4, w5>
+<Key %Trigger%>
+
+//-----------------------------------------------------------
+// Combat
+//-----------------------------------------------------------
+<KeyList MyList 0-9, Plus, Minus, Numpad0-9, NumpadPlus, NumpadMinus>
+
+<Hotkey ScrollLockOn MyList; ScrollLockOn Alt MyList>
+<SendLabel w1, w2, w3, w4, w5>
+<Key %Trigger%>
+ 
+//-----------------------------------------------------------
+// All Client Movement
+//-----------------------------------------------------------
+<MovementHotkey ScrollLockOn Up, Down, Right, Left, Space>
+<SendLabel w1, w2, w3, w4, w5>
+<Key %Trigger%>
+ 
+//-----------------------------------------------------------
+// Key Broadcasting
+//-----------------------------------------------------------
+<UseKeyAsModifier Oem3>
+<Hotkey ScrollLockOn Oem3 Shift LButton, MButton, RButton, Esc, Enter>
+<SendLabel w1, w2, w3, w4, w5>
+<ClickMouse %TriggerMainKey%>
+<RestoreMousePos>
+<Key %Trigger%>
+
+//-----------------------------------------------------------
+// Mounting
+//-----------------------------------------------------------
+<Hotkey ScrollLockOn Oem3 Button4, Button5>
+<SendLabel w1, w2, w3, w4, w5>
+<ClickMouse %TriggerMainKey%>
+<RestoreMousePos>
+<Key %Trigger%>
