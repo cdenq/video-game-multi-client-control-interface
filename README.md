@@ -1,5 +1,4 @@
-# videogame-multi-client-control-interface
-
+# video-game-multi-client-control-interface
 ## My WoW Multiboxing Software
 
 `My WoW Multiboxing Software` is a collection of all my old custom AutoHotkey multiboxing scripts for videogame World of Warcraft (WoW). This builds upon an older script written in HotkeyNet (defunct). These date back to 2015 or so, before I ever took any formal lessons in coding. Everything here a product of self-teaching, albeit done poorly.
